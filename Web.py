@@ -2,6 +2,10 @@ from flask import Flask
 
 app = Flask(__name__)
 
+with open("Da-ggle.html", mode="r") as d:
+    html = d.read()
+
 @app.route("/")
-def hello_world():
-    return "<p>Hello, World!</p>"
+
+def web():
+    return html
